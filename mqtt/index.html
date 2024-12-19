@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT Messaging with Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">MQTT Messaging</h1>
+    
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h4 class="card-title">Publish Message</h4>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="topic" class="form-label">Topic</label>
+            <input id="topic" type="text" class="form-control" placeholder="Enter Topic" />
+          </div>
+          <div class="col-md-6">
+            <label for="message" class="form-label">Message</label>
+            <input id="message" type="text" class="form-control" placeholder="Enter Message" />
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-primary w-100" onclick="publishMessage()">Publish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- MQTT JS -->
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
